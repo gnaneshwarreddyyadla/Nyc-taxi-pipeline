@@ -11,3 +11,28 @@ airflow/airflow.db
 target/
 dbt_packages/
 logs/
+# Environment variables - NEVER commit this
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.python-version
+
+# Data files (too large for git)
+data/raw/
+data/processed/
+*.csv
+*.parquet
+
+# dbt
+dbt/target/
+dbt/logs/
+dbt/dbt_packages/
+
+# Airflow
+airflow/logs/
