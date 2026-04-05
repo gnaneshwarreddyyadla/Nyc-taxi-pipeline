@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: raw
+    database: TAXI_DB
+    schema: RAW
+    tables:
+      - name: taxi_trips
+      - name: taxi_zones
+
+models:
+  - name: stg_taxi_trips
+    columns:
+      - name: pickup_datetime
+        tests: [not_null]
+      - name: total_amount
+        tests: [not_null]
+
+  - name: stg_taxi_zones
+    columns:
+      - name: location_id
+        tests: [not_null, unique]

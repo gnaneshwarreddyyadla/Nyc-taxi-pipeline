@@ -36,3 +36,4 @@ dbt/dbt_packages/
 
 # Airflow
 airflow/logs/
+profiles.yml
